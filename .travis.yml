@@ -6,3 +6,7 @@ addons:
       - libcr-dev 
       - mpich2 
       - mpich2-doc
+script:
+  - mpicc ./src/rgb_histogram.c -o ./build/rgbhistogram
+  - cd build
+  - mpirun -n 2 rgbhistogram
