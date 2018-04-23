@@ -7,6 +7,9 @@ addons:
       - mpich2 
       - mpich2-doc
 script:
+  - cd build
+  - wget http://download847.mediafire.com/yytddnym8scg/tsu144gjmu29xj3/rgbdata-temp
+  - cd ..
   - mpicc ./src/rgb_histogram.c -o ./build/rgbhistogram
   - cd build
   - mpirun -n 2 rgbhistogram
