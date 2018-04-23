@@ -32,7 +32,7 @@ int main () {
 		
 		for(i=0; i < ((m * n)/3); i++){
 			fscanf(fd, "%d %d %d", &(warna[3 * i]), &(warna[3 * i + 1]), &(	warna[3 * i + 2] ));
-			printf("%d %d %d",(warna[3 * i]), (warna[3 * i + 1]), (	warna[3 * i + 2] ));
+			//printf("%d %d %d",(warna[3 * i]), (warna[3 * i + 1]), (	warna[3 * i + 2] ));
 			
 		}
 		fclose(fd);
