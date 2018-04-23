@@ -20,6 +20,9 @@ int main () {
 
 	/* Get my rank among all the processes */
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+	
+	printf("Rank = %d",rank);
+	printf("Size = %d",size);
 
 	if(rank==0){
 		FILE * fd = fopen("rgbdata-temp","r");
