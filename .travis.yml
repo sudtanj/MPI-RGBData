@@ -8,6 +8,7 @@ addons:
       - libmpich-dev
       - mpich2-doc
 script:
+  - mkdir output
   - cd build
   - wget http://download847.mediafire.com/yytddnym8scg/tsu144gjmu29xj3/rgbdata-temp
   - cd ..
