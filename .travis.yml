@@ -6,6 +6,6 @@ before_script:
     - chmod +x pushgithub.sh
     - ./install_mpich.sh
 script:
-    - ./compile.sh rgb_histogram 3
+    - ./compile.sh rgb_histogram 2
 
 

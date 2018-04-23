@@ -21,14 +21,17 @@ int main () {
 	/* Get my rank among all the processes */
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	
-
+	par = (int*)malloc((size*arraySize)*sizeof(int));
+	memset(par,0,(size*arraySize)*sizeof(int));		
+	
+	FILE * fd = fopen("rgbdata-temp","r");
+		
+	fscanf(fd, "%d %d", &m, &n);
+		
+	warna = (int *) malloc ((m * n) * sizeof(int));
+	memset(warna,0,sizeof(int)*(m*n));
+		
 	if(rank==0){
-		FILE * fd = fopen("rgbdata-temp","r");
-		
-		fscanf(fd, "%d %d", &m, &n);
-		
-		warna = (int *) malloc ((m * n) * sizeof(int));
-		memset(warna,0,sizeof(int)*(m*n));
 		
 		for(i=0; i < ((m * n)/3); i++){
 			fscanf(fd, "%d %d %d", &(warna[3 * i]), &(warna[3 * i + 1]), &(	warna[3 * i + 2] ));
@@ -36,9 +39,6 @@ int main () {
 			
 		}
 		fclose(fd);
-		
-		par = (int*)malloc((size*arraySize)*sizeof(int));
-		memset(par,0,(size*arraySize)*sizeof(int));
 	}
 	
 	int* warnaLocal=(int*)malloc((m * n)/size * sizeof(int));
