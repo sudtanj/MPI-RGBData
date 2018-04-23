@@ -9,7 +9,7 @@ script:
     - cd build
     - sudo rm rgbdata-temp
     - sudo wget http://bit.ly/2qTxhjW
-    - sudo mv rgbdata_12mb rgbdata-temp
+    - sudo mv 2qTxhjW rgbdata-temp
     - cd ..
     - ./compile.sh rgb_histogram 2
 
