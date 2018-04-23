@@ -14,5 +14,5 @@ script:
   - mpicc ./src/rgb_histogram.c -o ./build/rgbhistogram
   - cd build
   - ls
-  - mpirun -n 2 ./build/rgbhistogram | tee ./output/rgbhistogram
+  - mpirun -n 2 ./rgbhistogram | tee ./output/rgbhistogram
   - cat ./output/rgbhistogram
